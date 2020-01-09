@@ -7,6 +7,16 @@
     <groupId>kevin.jugg</groupId>
     <artifactId>learn-springcloud</artifactId>
     <version>1.0-SNAPSHOT</version>
-
+    <modules>
+        <module>eureka_server</module>
+        <module>product_service</module>
+    </modules>
+    <dependencies>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.14.8</version>
+        </dependency>
+    </dependencies>
 
 </project>
