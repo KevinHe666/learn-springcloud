@@ -11,6 +11,10 @@ import java.io.Serializable;
  */
 @Data
 public class Product implements Serializable {
+    public Product() {
+
+    }
+
     public Product(int id, String name, int price, int store) {
         this.id = id;
         this.name = name;
