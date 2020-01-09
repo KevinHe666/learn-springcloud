@@ -1,0 +1,15 @@
+server:
+  port: 8761
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    #    声明自己是个服务器 单例的非集群(本机模拟)
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+      #      注册中心的地址
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+  #不让剔除某个节点
+  server:
+    enable-self-preservation: false
