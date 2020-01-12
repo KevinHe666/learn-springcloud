@@ -1,5 +1,7 @@
 package kevin.jugg.order_service.domain;
 
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableId;
 import lombok.Data;
 
 import java.io.Serializable;
@@ -15,6 +17,7 @@ public class ProductOrder implements Serializable {
     /**
      * id
      */
+    @TableId(value = "id", type = IdType.AUTO)
     private int id;
     /**
      * 商品名称
