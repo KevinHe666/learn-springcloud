@@ -13,12 +13,12 @@ import org.springframework.web.bind.annotation.RestController;
  * @Create 2020-01-09 18:16
  */
 @RestController
-@RequestMapping("api/v1/order/save")
+@RequestMapping("/api/v1/order")
 public class OrderController {
     @Autowired
     ProductOrderService productOrderService;
-
+    @RequestMapping("/save")
     public Object save(@RequestParam("user_id") int userId, @RequestParam("product_id") int productId) {
-        return null;
+        return productOrderService.save(userId, productId);
     }
 }
